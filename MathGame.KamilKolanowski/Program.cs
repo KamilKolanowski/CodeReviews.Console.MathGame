@@ -1,4 +1,4 @@
-﻿namespace KamilKolanowski.MathGame;
+﻿namespace MathGame.KamilKolanowski;
 
 class Program
 {
