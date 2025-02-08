@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamilKolanowski.MathGame", "KamilKolanowski.MathGame.csproj", "{3AF151B0-7A72-42A8-888E-DDA679CCBE98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathGame.KamilKolanowski", "MathGame.KamilKolanowski.csproj", "{3AF151B0-7A72-42A8-888E-DDA679CCBE98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
