@@ -18,10 +18,8 @@ class Program
         RecordGames rc = new RecordGames();
         CalculateResult cr = new CalculateResult();
         
-        
         while (true)
         {
-
             string userChoice = uc.GetUserChoice(); 
             
             if (userChoice.ToLower() == "q")
