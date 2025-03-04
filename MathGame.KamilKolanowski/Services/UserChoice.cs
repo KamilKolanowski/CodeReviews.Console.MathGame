@@ -1,22 +1,21 @@
+
 namespace MathGame.KamilKolanowski.Services;
 
 public class UserChoice
 {
-    private Tuple<int, int> _choice;
     ApplicationView av = new ApplicationView();
     
-    public Tuple<int, int> GetUserNumbers()
+    public int GetUserResult()
     {
-        Console.Write("Provide first number: ");
-        int firstNumber = int.Parse(Console.ReadLine());
-            
-        Console.Write("Provide second number: ");
-        int secondNumber = int.Parse(Console.ReadLine());
-        
-        _choice = new Tuple<int, int>(firstNumber, secondNumber);
-        return _choice;
+        while (true)
+        {
+            if (int.TryParse(Console.ReadLine(), out int result))
+            {
+                return result;
+            }
+            Console.WriteLine("Invalid input. Please enter a valid integer.");
+        }
     }
-
     public string GetUserChoice()
     {
         List<string> validChoices = new List<string> { "a", "s", "m", "d", "h", "q" };
@@ -36,4 +35,23 @@ public class UserChoice
         
         return userChoice;
     }
+    
+    public void ProcessUserGuess(CalculateResult cr, Tuple<int, int> randomNumbers, string userChoice)
+    {
+        bool isResultCorrect = false;
+    
+        while (!isResultCorrect)
+        {
+            int userResult = GetUserResult();  
+            isResultCorrect = cr.VerifyResult(randomNumbers.Item1, randomNumbers.Item2, userChoice, userResult);
+
+            if (!isResultCorrect)
+            {
+                Console.WriteLine("Incorrect! Try again.");
+            }
+        }
+
+        Console.WriteLine("You guessed it!");
+    }
+
 }

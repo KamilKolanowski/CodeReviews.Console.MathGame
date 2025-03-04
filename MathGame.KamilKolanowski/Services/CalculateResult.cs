@@ -24,4 +24,11 @@ public class CalculateResult
                 return 0;
         }
     }
+
+    public bool VerifyResult(int num1, int num2, string choice, int result)
+    {
+        int correctResult = GetResult(num1, num2, choice);
+        
+        return result == correctResult;
+    }
 }
