@@ -24,7 +24,6 @@ public class Game
         while (true)
         {
             string userChoice = uc.GetUserChoice().ToLower();
-            bool isResultCorrect = false;
 
             switch (userChoice)
             {
