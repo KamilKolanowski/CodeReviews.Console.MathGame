@@ -9,6 +9,7 @@ public class ApplicationView
         Console.WriteLine("s: Subtraction");
         Console.WriteLine("m: Multiplication");
         Console.WriteLine("d: Division");
+        Console.WriteLine("r: Random Game");
         Console.WriteLine("h: History");
         Console.WriteLine("q: Quit");
         

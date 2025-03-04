@@ -18,7 +18,7 @@ public class UserChoice
     }
     public string GetUserChoice()
     {
-        List<string> validChoices = new List<string> { "a", "s", "m", "d", "h", "q" };
+        List<string> validChoices = new List<string> { "a", "s", "m", "d", "r", "h", "q" };
         string userChoice;
 
         do
