@@ -7,9 +7,9 @@ public class Game
     public void Run()
     {
         UserChoice uc = new UserChoice();
-        RecordGames rc = new RecordGames();
+        GameRecorder rc = new GameRecorder();
         CalculateResult cr = new CalculateResult();
-        GenerateRandomResult gr = new GenerateRandomResult();
+        RandomResultGenerator gr = new RandomResultGenerator();
         MapOperations mop = new MapOperations();
 
         string userName;
@@ -27,7 +27,7 @@ public class Game
             
             if (userChoice.ToLower() == "q")
             {
-                Console.WriteLine("Thank you for playing!");
+                Console.WriteLine($"Thank you for playing {userName}!");
                 break;
             }
 
@@ -48,14 +48,15 @@ public class Game
             uc.ProcessUserGuess(cr, randomNumbers, userChoice); 
             
             stopwatch.Stop();
-            Console.WriteLine($"It took you: {stopwatch.ElapsedMilliseconds / 1000}s to guess the result");
+            long guessingTime = stopwatch.ElapsedMilliseconds / 1000;
+            Console.WriteLine($"It took you {guessingTime}s to guess the result");
             
             if (result == int.MinValue)
             {
                 continue;
             }
             
-            rc.SaveGame(userChoice, result);
+            rc.SaveGame(userChoice, result, guessingTime);
 
             Console.WriteLine("__________________________________\n");
         }

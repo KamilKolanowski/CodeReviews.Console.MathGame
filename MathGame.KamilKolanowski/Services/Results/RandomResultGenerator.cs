@@ -1,6 +1,6 @@
 namespace MathGame.KamilKolanowski.Services;
 
-public class GenerateRandomResult
+public class RandomResultGenerator
 {
     Random _rnd = new Random();
 

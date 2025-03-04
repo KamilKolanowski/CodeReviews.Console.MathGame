@@ -5,7 +5,7 @@ namespace MathGame.KamilKolanowski;
 /*
  * REQUIREMENTS
  * *****************************************************************
- * You need to create a Math game containing the 4 basic operations
+ * You need to create a Math game containing the 4 basic operations 
  * The divisions should result on INTEGERS ONLY and dividends should go from 0 to 100. Example: Your app shouldn't present the division 7/2 to the user, since it doesn't result in an integer.
  * Users should be presented with a menu to choose an operation
  * You should record previous games in a List and there should be an option in the menu for the user to visualize a history of previous games.
@@ -30,7 +30,6 @@ class Program
     static void Main(string[] args)
     {
         Game gm = new Game();
-        
         gm.Run();
     }
 }
