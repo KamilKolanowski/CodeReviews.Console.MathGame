@@ -39,7 +39,7 @@ public class Game
                     break;
             }
 
-            var randomNumbers = gr.GetRandomNumbers();
+            var randomNumbers = gr.GetRandomNumbers(userChoice);
             var result = cr.GetResult(randomNumbers.Item1, randomNumbers.Item2, userChoice);
 
             Console.WriteLine($"I've done a calculation of {randomNumbers.Item1} {mop.MapOperation(userChoice)} {randomNumbers.Item2}, guess the result: ");

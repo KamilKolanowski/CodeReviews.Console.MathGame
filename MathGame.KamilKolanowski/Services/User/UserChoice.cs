@@ -50,7 +50,6 @@ public class UserChoice
                 Console.WriteLine("Incorrect! Try again.");
             }
         }
-
         Console.WriteLine("You guessed it!");
     }
 
